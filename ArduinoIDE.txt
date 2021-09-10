@@ -1,0 +1,60 @@
+char userInput;
+
+void setup() {
+
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(9, OUTPUT);
+  Serial.begin(9600);
+
+  
+  
+}
+
+
+void loop() {
+
+   
+
+
+  if(Serial.available()>0) {
+    userInput = Serial.read();
+    if(userInput == 'b') {
+      digitalWrite(10, HIGH);
+    }
+
+     if(userInput == 'n') {
+      digitalWrite(10, LOW);
+    }
+
+
+        if(userInput == 'r') {
+      digitalWrite(12, HIGH);
+    }
+
+     if(userInput == 't') {
+      digitalWrite(12, LOW);
+    }
+
+
+       if(userInput == 'g') {
+      digitalWrite(9, HIGH);
+    }
+
+     if(userInput == 'c') {
+      digitalWrite(9, LOW);
+    }
+
+
+        if(userInput == 'l') {
+      digitalWrite(11, HIGH);
+    }
+
+     if(userInput == 'x') {
+      digitalWrite(11, LOW);
+    }
+  }
+    
+
+}
